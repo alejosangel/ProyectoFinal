@@ -78,6 +78,12 @@ public class CrudTest {
   }
   
   @Test
+  public void testFbuscar () throws Exception {
+	driver.get("https://mern-crud.herokuapp.com");
+	assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Hola Hola 2 Modificacion[\\s\\S]*$"));
+  }
+	
+  @Test
   public void testFdelete() throws Exception {
     driver.get("https://mern-crud.herokuapp.com");
     driver.findElement(By.xpath("//div[@id='root']/div/div[2]")).click();
