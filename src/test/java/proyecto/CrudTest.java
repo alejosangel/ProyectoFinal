@@ -82,10 +82,11 @@ public class CrudTest {
     driver.get("https://mern-crud.herokuapp.com");
     driver.findElement(By.xpath("//div[@id='root']/div/div[2]")).click();
     driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr/td[5]/button[2]")).click();
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Hola Hola 2 Modificacion'])[2]/following::button[1]")).click();
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Hola Hola 2'])[2]/following::button[1]")).click();
+    pause (1500);
     //Assert - eliminar info
     //assertThat(driver.findElement(By.xpath("html/body/div/div/div[2]/table/tbody/tr[1]/td[1]")).getText(),is("Hola Hola 2 Modificacion"));
-    assertFalse(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*hola hola 2[\\s\\S]*$"));
+    assertFalse(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Hola Hola 2[\\s\\S]*$"));
   }
 
   @After
