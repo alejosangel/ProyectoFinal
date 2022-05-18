@@ -76,12 +76,6 @@ public class CrudTest {
     assertThat(driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/form/div[4]/div/p")).getText(),is("Successfully updated!"));
     driver.findElement(By.xpath("//i")).click();
   }
-  
-  @Test
-  public void testFbuscar () throws Exception {
-	driver.get("https://mern-crud.herokuapp.com");
-	assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Hola Hola 2[\\s\\S]*$"));
-  }
 	
   @Test
   public void testFdelete() throws Exception {
