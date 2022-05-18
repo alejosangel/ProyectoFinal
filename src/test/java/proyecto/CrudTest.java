@@ -77,12 +77,6 @@ public class CrudTest {
     driver.findElement(By.xpath("//i")).click();
   }
 	
-@Test
-  public void testFbuscar () throws Exception {
-	driver.get("https://mern-crud.herokuapp.com");
-	assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Hola Hola 2[\\s\\S]*$"));
-  }
-	
   @Test
   public void testFdelete() throws Exception {
     driver.get("https://mern-crud.herokuapp.com");
