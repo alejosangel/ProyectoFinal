@@ -85,7 +85,7 @@ public class CrudTest {
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Hola Hola 2 Modificacion'])[2]/following::button[1]")).click();
     //Assert - eliminar info
     //assertThat(driver.findElement(By.xpath("html/body/div/div/div[2]/table/tbody/tr[1]/td[1]")).getText(),is("Hola Hola 2 Modificacion"));
-    assertFalse(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Hola Hola 2 Modificacion[\\s\\S]*$"));
+    assertFalse(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*hola hola 2[\\s\\S]*$"));
   }
 
   @After
