@@ -41,7 +41,7 @@ public class CrudTest {
 
   @Test
   public void testAdd() throws Exception {
-    driver.get("http://localhost:3000/");
+    driver.get("https://mern-crud.herokuapp.com");
     driver.findElement(By.xpath("//div[@id='root']/div/div[2]/button")).click();
     driver.findElement(By.name("name")).click();
     driver.findElement(By.name("name")).clear();
@@ -65,7 +65,7 @@ public class CrudTest {
   
   @Test
   public void testEdit() throws Exception {
-    driver.get("http://localhost:3000/");
+    driver.get("https://mern-crud.herokuapp.com");
     driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr/td[5]/button")).click();
     driver.findElement(By.name("name")).click();
     driver.findElement(By.name("name")).clear();
@@ -79,7 +79,7 @@ public class CrudTest {
   
   @Test
   public void testFdelete() throws Exception {
-    driver.get("http://localhost:3000/");
+    driver.get("https://mern-crud.herokuapp.com");
     driver.findElement(By.xpath("//div[@id='root']/div/div[2]")).click();
     driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr/td[5]/button[2]")).click();
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Hola Hola 2 Modificacion'])[2]/following::button[1]")).click();
