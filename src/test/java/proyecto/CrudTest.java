@@ -69,7 +69,7 @@ public class CrudTest {
     driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr/td[5]/button")).click();
     driver.findElement(By.name("name")).click();
     driver.findElement(By.name("name")).clear();
-    driver.findElement(By.name("name")).sendKeys("Modificacion");
+    driver.findElement(By.name("name")).sendKeys("Hola Hola 2 Modificacion");
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Woah!'])[1]/following::button[1]")).click();
     pause (1500);
     //Asert - editar info 
@@ -82,10 +82,10 @@ public class CrudTest {
     driver.get("https://mern-crud.herokuapp.com");
     driver.findElement(By.xpath("//div[@id='root']/div/div[2]")).click();
     driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr/td[5]/button[2]")).click();
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Modificacion'])[2]/following::button[1]")).click();
-    pause (1500);
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Hola Hola 2 Modificacion'])[2]/following::button[1]")).click();
     //Assert - eliminar info
-    assertFalse(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Modificacion[\\s\\S]*$"));
+    //assertThat(driver.findElement(By.xpath("html/body/div/div/div[2]/table/tbody/tr[1]/td[1]")).getText(),is("Hola Hola 2 Modificacion"));
+    assertFalse(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Hola Hola 2 Modificacion[\\s\\S]*$"));
   }
 
   @After
@@ -138,4 +138,3 @@ public class CrudTest {
     }
   }
 }
-
